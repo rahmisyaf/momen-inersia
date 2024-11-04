@@ -64,7 +64,9 @@ def inertia(data) :
 
 		inertia = ((period**2/first_period**2) - 1)*first_inertia
 		data['I (kg.m²)'][i] = inertia
-
+		
+	print(f'inersia rata rata : {sum(data['I (kg.m²)'])/5}')
+	
 	df = pd.DataFrame(data) #creating dataframe from 'data'
 	print(tabulate(df, 
 						headers='keys', 
